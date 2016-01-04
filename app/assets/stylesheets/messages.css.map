@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,kBAAkB;EACd,KAAK,EAAC,IAAI;EACV,OAAO,EAAC,YAAY;EACpB,MAAM,EAAE,cAAc",
+"sources": ["messages.scss"],
+"names": [],
+"file": "messages.css"
+}

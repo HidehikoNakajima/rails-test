@@ -5,11 +5,20 @@
   
   <div class="panel-body">
     <% @messages.each do |message| %>
-      <span class="label label-info"><%= message.name %></span>
-        <%= message.body %>
-        (<%= link_to "edit" , edit_message_path(message) %>
-         <%= link_to "destroy" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
-        )
+      <div class="messageRow">
+        <span class="col-sm-2 label label-info" id="lblName"><%= message.name %>(<%= message.age %>)</span>
+          <div class="col-sm-10"><%= message.body %> 
+            (<% if message.created_at >= message.updated_at then %>
+            　<%= message.created_at.to_s(:datetime) %>
+             <% else %>
+              <%= message.updated_at.to_s(:datetime) %>
+             <% end %>
+             ) 
+          【<%= link_to "編集" , edit_message_path(message) %> / 
+           <%= link_to "削除" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
+          】
+          </div>
+      </div>
       <br>
     <% end %>
   </div>

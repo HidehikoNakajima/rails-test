@@ -1,0 +1,25 @@
+body{
+  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size:16px;
+ }
+
+.messageRow{
+  padding-top:15px;
+}
+
+#lblName{
+  font-size:16px;  
+  text-align: left;
+}
+
+.topdownCenter{
+  padding:5px 2px;
+}
+
+.field_with_errors {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #f00; 
+}
+
+/*# sourceMappingURL=messages.css.map */

@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
+      @message.daytime = Time.zone.now 
       redirect_to root_path , notice: 'メッセージを保存しました' 
     else
       @messages = Message.all
@@ -22,6 +23,7 @@ class MessagesController < ApplicationController
   
   def update
     if @message.update(message_params)
+      @message.daytime = Time.zone.now 
       redirect_to root_path , notice: 'メッセージを編集しました'
     else
       render 'edit'
@@ -36,7 +38,7 @@ class MessagesController < ApplicationController
   private
   
   def message_params
-    params.require(:message).permit(:name,:body,:age)
+    params.require(:message).permit(:name,:body,:age,:daytime)
   end
   
   def set_message
